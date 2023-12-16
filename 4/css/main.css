@@ -1,0 +1,75 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+h1,h6 {
+    padding: 0;
+    margin: 0;
+}
+.main-wrapper{
+    padding: 130px 0;
+
+    background: lightsteelblue;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+h1{
+    margin-bottom: 50px;
+}
+h6{
+    font-size: 16px;
+    font-weight: 400;
+}
+.input-block{
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    display: block;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 250px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    outline-style: none;
+}
+.total-numb{
+    width: 400px;
+}
+.total{
+    margin-bottom: 50px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    border: none;
+    background: none;
+}
+.range-block{
+    display: flex;
+    padding: 50px 0;
+}
+.result-block{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.result{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    border: none;
+    background: none;
+}
+.result-numb{
+    display: flex;
+}

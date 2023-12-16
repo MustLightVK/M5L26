@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <h1>Мой первый калькулятор</h1>
+            <div class="input-block">
+                <div class="input-block-column">
+                    <h6>Доход в месяц</h6>
+                    <div class="input-wrapper">
+                        <input type="number" placeholder="Зарплата" id="income-salary" class="input">
+                        <input type="number" placeholder="Фриланс" id="income-freelance" class="input">
+                        <input type="number" placeholder="Доп. доход" id="income-add1" class="input">
+                        <input type="number" placeholder="Доп. доход" id="income-add2" class="input">
+                    </div>
+                </div>
+                <div class="input-block-column">
+                    <h6>Обязательные расходы</h6>
+                    <div class="input-wrapper">
+                        <input type="number" placeholder="Аренда квартиры" id="cost-flat" class="input">
+                        <input type="number" placeholder="ЖКХ" id="cost-house-service" class="input">
+                        <input type="number" placeholder="Транспорт" id="cost-transport" class="input">
+                        <input type="number" placeholder="Кредиты" id="cost-credits" class="input">
+                    </div>
+                </div>
+                <div class="input-block-column">
+                    <div class="total-numb">
+                        <h6>Доступно в месяц (без копилки):</h6>
+                        <input type="number" id="total-month" class="total" value="0" readonly>
+                    </div>
+                    <div class="total-numb">
+                        <h6>Доступно в день:</h6>
+                        <input type="number" id="total-day" class="total" value="0" readonly>
+                    </div>
+                    <div class="total-numb">
+                        <h6>Накопим за год:</h6>
+                        <input type="number" id="total-year" class="total" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="range-block">
+                <h6>Копилка (Сколько откладываем?)</h6>
+                <input id="money-box-range" type="range" min="0" max="100" value="0" readonly>
+                <div><span id="total-percents">0</span>%</div>
+            </div>
+            <div class="range-block">
+                <div class="result-numb">
+                    <h6>Копим:</h6>
+                    <input type="number" id="accumulation" class="result" value="0" readonly>
+                </div>
+                <div class="result-numb">
+                    <h6>Тратим:</h6>
+                    <input type="number" id="spend" class="result" value="0" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
