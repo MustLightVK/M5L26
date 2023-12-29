@@ -1,29 +1,16 @@
-function calculateAvailableMoney(income, costs) {
-    return income - costs;
-}
-
-function calculateDailySpend(spend) {
-    return (spend / 30).toFixed();
-}
-
-function calculateAccumulation(totalMonth, totalPercents) {
-    return ((totalMonth * totalPercents) / 100).toFixed();
-}
-
-function calculateAnnualSavings(accumulation) {
-    return accumulation * 12;
-}
-
 function calculateFinancialValues() {
     const totalPercents = $('#money-box-range').val();
 
     const income = strToNum($('#income-salary')) + strToNum($('#income-freelance')) + strToNum($('#income-add1')) + strToNum($('#income-add2'));
     const costs = strToNum($('#cost-flat')) + strToNum($('#cost-house-service')) + strToNum($('#cost-transport')) + strToNum($('#cost-credits'));
-    const totalMonth = calculateAvailableMoney(income, costs);
-    const accumulation = calculateAccumulation(totalMonth, totalPercents);
+
+    const totalMonth = income - costs;
+
+    const accumulation = ((totalMonth * totalPercents) / 100).toFixed();
+
     const spend = totalMonth - accumulation;
-    const totalDay = calculateDailySpend(spend);
-    const totalYear = calculateAnnualSavings(accumulation);
+    const totalDay = (spend / 30).toFixed();
+    const totalYear = accumulation * 12;
 
     return {
         totalMonth,
@@ -33,6 +20,7 @@ function calculateFinancialValues() {
         totalYear
     };
 }
+
 
 function updateDOMValues(values) {
     $('#total-month').val(values.totalMonth);
